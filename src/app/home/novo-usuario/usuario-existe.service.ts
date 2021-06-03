@@ -1,7 +1,7 @@
 import { NovoUsuarioService } from './novo-usuario.service';
 import { Injectable } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
-import { first, map, switchMap} from 'rxjs/operators';
+import { delay, first, map, switchMap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,7 @@ export class UsuarioExisteService {
   usuarioJaExiste(){
     return (control: AbstractControl) => {
       return control.valueChanges.pipe(
+        delay(2000),
         switchMap((nomeUsuario) =>
           this.NovoUsuarioService.verificaUsuarioExistente(nomeUsuario)
         ),
