@@ -1,7 +1,7 @@
 export interface Animal {
   id:number;
   postDate:Date;
-  url:string;
+  url: string;
   description:string;
   allowComments: boolean;
   likes: number;

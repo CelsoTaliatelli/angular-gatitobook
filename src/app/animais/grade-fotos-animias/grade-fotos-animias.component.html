@@ -1,4 +1,4 @@
-<p class="text-center text-muted"*ngIf="!animais.length">
+<p class="text-center text-muted" *ngIf="!animais.length">
   Desculpe não há animais
 </p>
 
@@ -9,7 +9,7 @@
     <app-cartao>
       <app-animal
         [url]="animal.url"
-        [descricao]="animal.description">
+        [descricao]="animal.description" >
       </app-animal>
       <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2">
         {{animal.likes}}

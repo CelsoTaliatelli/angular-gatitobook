@@ -13,6 +13,8 @@ export class AnimalComponent implements OnInit {
   private urlOriginal = '';
 
   @Input() descricao = '';
+
+
   @Input() set url(url:string){
     if(url.startsWith('data')){
       this.urlOriginal = url;
@@ -21,8 +23,8 @@ export class AnimalComponent implements OnInit {
     }
   }
 
-  get url(): string{
-    return this.url;
+  get url(): string {
+    return this.urlOriginal;
   }
 
   constructor() { }

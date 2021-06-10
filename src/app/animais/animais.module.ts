@@ -1,3 +1,4 @@
+import { CartaoModule } from './../componentes/cartao/cartao.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +12,8 @@ import { GradeFotosAnimiasComponent } from './grade-fotos-animias/grade-fotos-an
   declarations: [ListaAnimaisComponent, AnimalComponent, GradeFotosAnimiasComponent],
   imports: [
     CommonModule,
-    AnimaisRoutingModule
+    AnimaisRoutingModule,
+    CartaoModule
   ]
 })
 export class AnimaisModule { }
