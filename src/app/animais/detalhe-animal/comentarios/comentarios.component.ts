@@ -24,8 +24,9 @@ export class ComentariosComponent implements OnInit {
   ngOnInit(): void {
     this.comentarios$ = this.comentarioService.buscaComentario(this.id);
     this.comentarioForm = this.formBuilder.group({
-      comentario: ['',Validators.maxLength(300)]
+      comentario: [' ',Validators.maxLength(300)]
     })
+    console.log(this.comentarioForm);
   }
 
   gravar():void{
