@@ -1,4 +1,4 @@
-import { switchMap } from 'rxjs/operators';
+import { switchMap, take } from 'rxjs/operators';
 import { UsuarioService } from './../../autenticacao/usuario/usuario.service';
 import { AnimaisService } from './../animais.service';
 import { Injectable } from '@angular/core';
@@ -22,7 +22,8 @@ export class ListaAnimaisResolver implements Resolve<Animais> {
       switchMap((usuario) => {
         const userName = usuario.name ?? '';
         return this.animaisService.listaDoUsuario(userName);
-      })
+      }),
+      take(1) //faz o fluxo apenas uma vez
     )
   }
 }
