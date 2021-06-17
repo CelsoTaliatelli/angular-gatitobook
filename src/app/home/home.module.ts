@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { MensagemModule } from './../componentes/mensagem/mensagem.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,8 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     HomeRoutingModule,
     FormsModule,
-    MensagemModule,
-    ReactiveFormsModule
+    SharedModule
 
   ],
   exports:[
